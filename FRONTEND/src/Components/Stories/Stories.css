@@ -1,0 +1,29 @@
+.stories {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.stories-cards {
+  display: flex;
+  gap: 30px;
+}
+.stories-title {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.stories-description {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  .stories-cards {
+    flex-direction: column;
+    gap: 50px;
+  }
+}

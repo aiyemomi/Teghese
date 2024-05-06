@@ -1,0 +1,11 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 8px;
+}
+.breadcrumb-item {
+  cursor: pointer;
+  text-decoration: none;
+}

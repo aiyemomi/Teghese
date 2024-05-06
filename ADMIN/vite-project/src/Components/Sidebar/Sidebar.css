@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+}
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  gap: 20px;
+  cursor: pointer;
+}

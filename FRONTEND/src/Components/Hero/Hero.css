@@ -1,0 +1,39 @@
+/* .hero {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.hero-shop,
+.hero-shop-women {
+  position: relative;
+  display: flex;
+  flex: 1;
+
+  position: relative; 
+  display: inline-block;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.shop-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.hero-shop button,
+.hero-shop-women button {
+
+  cursor: pointer;
+}
+.hero-btn-link {
+  color: black;
+  text-decoration: none;
+} */

@@ -1,0 +1,62 @@
+.best-sellers {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 80px;
+}
+.best-sellers-section-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.best-sellers-list {
+  text-transform: uppercase;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 150px;
+  letter-spacing: 2px;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.best-sellers-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.best-sellers hr {
+  height: 2px;
+  border: none;
+  border-radius: 10px;
+  background: #d3d3d3;
+}
+.active-hr {
+  position: absolute;
+  bottom: -86px;
+  width: 90px;
+  height: 3px;
+  background-color: black !important; 
+}
+
+.active-hr.shirts {
+  left: 370px;
+}
+
+.active-hr.pants {
+  left: 590px; /* Adjust based on menu item width */
+}
+
+.active-hr.two-piece {
+  left: 830px; /* Adjust based on menu item width */
+}
