@@ -1,21 +1,17 @@
 import p1_img from "./BestSellers/woman-1.jpg";
-// import p2_img from "./BestSellers/cargo-pants.webp";
-// import p3_img from "./BestSellers/white-shirt-shorts.jpg";
-import p2_img from "./BestSellers/man-woman-cargo.jpg";
-import p3_img from "./BestSellers/guy-cargo-pants.jpg";
 import p4_img from "./BestSellers/couple-trench.jpg";
 import p5_img from "./BestSellers/collections-2.jpg";
-import shop_img1 from "../../Assets/Dummy/Navbar/Dropdown/nav-img-woman2.jpg";
-import men_img1 from "../../Assets/Dummy/Navbar/Dropdown/nav-img-man2.jpg";
-import women_img1 from "../../Assets/Dummy/Navbar/Dropdown/nav-img-woman.jpg";
-import women_img3 from "../../Assets/Dummy/Navbar/Dropdown/nav-img-woman3.jpg";
+import shop_img1 from "../../assets/Dummy/Navbar/Dropdown/nav-img-woman2.jpg";
+import men_img1 from "../../assets/Dummy/Navbar/Dropdown/nav-img-man2.jpg";
+import women_img1 from "../../assets/Dummy/Navbar/Dropdown/nav-img-woman.jpg";
+import women_img3 from "../../assets/Dummy/Navbar/Dropdown/nav-img-woman3.jpg";
 
 import p6_img from "./BestSellers/man-model1.webp";
 import p7_img from "./BestSellers/man-model2.webp";
 import p8_img from "./BestSellers/man-model3.webp";
-import img_1 from "../../Assets/Dummy/ShopInstagram/woman-in-skirt.jpg";
-import img_2 from "../../Assets/Dummy/ShopInstagram/man-white-shirt.jpg";
-import img_3 from "../../Assets/Dummy/ShopInstagram/man-woman-1.jpg";
+import img_1 from "../../assets/Dummy/ShopInstagram/woman-in-skirt.jpg";
+import img_2 from "../../assets/Dummy/ShopInstagram/man-white-shirt.jpg";
+import img_3 from "../../assets/Dummy/ShopInstagram/man-woman-1.jpg";
 
 export let data_product = [
   {
@@ -28,15 +24,17 @@ export let data_product = [
   {
     id: 2,
     name: "Army Combat Cargo Shirt",
-    image: p2_img,
-    price: 20000,
+    image: p1_img,
+    new_price: 20000,
     category: "women",
   },
   {
     id: 3,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p1_img,
+    new_price: 20000,
+    old_price: 15000,
+
     category: "kids",
   },
 ];
@@ -44,78 +42,68 @@ export let all_product = [
   {
     id: 1,
     name: "Striped Flutter Overlapped Blouse",
-    image: p1_img,
-    price: 20000,
+    image: p6_img,
+    new_price: " ₦20000",
     category: "men",
+    color: ["white"],
   },
   {
     id: 2,
     name: "Army Combat Cargo Shirt",
-    image: p2_img,
-    price: 20000,
+    image: p7_img,
+    new_price: 20000,
+    old_price: 15000,
     category: "women",
   },
   {
     id: 3,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p8_img,
+    new_price: 20000,
     category: "kids",
   },
   {
     id: 4,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p8_img,
+    new_price: 20000,
+    old_price: 14000,
     category: "men",
   },
   {
     id: 5,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p7_img,
+    new_price: 20000,
     category: "women",
   },
   {
     id: 6,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p6_img,
+    new_price: 20000,
+    old_price: 13000,
     category: "kids",
   },
   {
     id: 7,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p8_img,
+    new_price: 20000,
     category: "men",
   },
   {
     id: 8,
     name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
+    image: p7_img,
+    new_price: 20000,
     category: "women",
-  },
-  {
-    id: 9,
-    name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
-    category: "kids",
-  },
-  {
-    id: 10,
-    name: " Silk Two-piece",
-    image: p3_img,
-    price: 20000,
-    category: "kids",
   },
 ];
 export const navItems = [
   {
     label: "new",
-    subItems: ["Shop", "Winter", "Fall", "Spring"],
+    subItems: ["Winter", "Fall", "Spring"],
     images: [women_img3],
   },
   {
@@ -192,28 +180,30 @@ export const bestseller_items = [
     name: "Striped Flutter Overlapped Blouse",
     description: "",
     image: p6_img,
-    price: "₦20,000",
+    new_price: "₦20,000",
   },
   {
     id: 2,
     name: "Army Combat Cargo Shirt",
     description: "",
     image: p7_img,
-    price: "₦34,500",
+    new_price: "₦34,500",
+    old_price: "₦29,500",
   },
   {
     id: 3,
     name: " Silk Two-piece",
     description: "",
     image: p8_img,
-    price: "₦55,000",
+    new_price: "₦55,000",
+    old_price: "₦15,000",
   },
   {
     id: 1,
     name: "Striped Flutter Overlapped Blouse",
     description: "",
     image: p6_img,
-    price: "₦10,000",
+    new_price: "₦10,000",
   },
 ];
 export const new_collections = [
@@ -228,14 +218,14 @@ export const new_collections = [
     id: 2,
     name: "Army Combat Cargo Shirt",
     description: "",
-    image: p2_img,
+    image: p1_img,
     price: 20000,
   },
   {
     id: 3,
     name: " Silk Two-piece",
     description: "",
-    image: p3_img,
+    image: p1_img,
     price: 20000,
   },
 ];

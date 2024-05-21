@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import pic1 from "../Assets/Dummy/ShopInstagram/man-white-shirt.jpg";
-import pic2 from "../Assets/Dummy/ShopInstagram/woman-in-skirt.jpg";
-import pic3 from "../Assets/Dummy/ShopInstagram/man-woman-1.jpg";
+import React from "react";
+import ShopCatDropdown from "../components/ShopCatDropdown/ShopCatDropdown";
+import { all_product } from "../assets/Dummy/data";
 
 const New = () => {
-
-  return <div></div>;
+  return (
+    <div>
+      <ShopCatDropdown title="New" data={all_product} />
+    </div>
+  );
 };
 
 export default New;

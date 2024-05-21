@@ -1,11 +1,34 @@
-const Product = require("../models/product");
+const Product = require("../models/product.js");
 const port = process.env.PORT;
 const asyncWrapper = require("../middleware/asyncWrapper.js");
 
+// Get All Products
+
 const getAllProducts = asyncWrapper(async (req, res) => {
   const all_products = await Product.find();
-  res.status(200).json(all_products);
+  res.status(200).json({ nbHits: all_products.length, all_products });
 });
+
+// Get New Products
+const getNewProducts = asyncWrapper(async (req, res) => {
+  const new_products = await Product.find({}).sort({ dateCreated: "desc" });
+  res.status(200).json(new_products);
+});
+
+// Get Products by Category
+
+const getProductsByCategory = asyncWrapper(async (req, res) => {
+  const category = req.params.category;
+  try {
+    const products = await Product.find({ category });
+    res.status(200).json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Get Single Product
 
 const getSingleProduct = asyncWrapper(async (req, res) => {
   const { id } = req.params;
@@ -18,6 +41,8 @@ const getSingleProduct = asyncWrapper(async (req, res) => {
   res.status(200).json(product);
 });
 
+// Create Product
+
 const createProduct = asyncWrapper(async (req, res) => {
   const new_product = await Product.create({
     ...req.body,
@@ -25,6 +50,8 @@ const createProduct = asyncWrapper(async (req, res) => {
   });
   res.status(201).json(new_product);
 });
+
+// Update Products
 
 const updateProduct = asyncWrapper(async (req, res) => {
   let product_filename;
@@ -48,6 +75,8 @@ const updateProduct = asyncWrapper(async (req, res) => {
   res.status(200).json(updated_product);
 });
 
+// Delete Product
+
 const deleteProduct = asyncWrapper(async (req, res) => {
   const deleted_product = await Product.findByIdAndDelete({
     _id: req.params.id,
@@ -63,6 +92,8 @@ const deleteProduct = asyncWrapper(async (req, res) => {
 module.exports = {
   getAllProducts,
   getSingleProduct,
+  getNewProducts,
+  getProductsByCategory,
   createProduct,
   updateProduct,
   deleteProduct,

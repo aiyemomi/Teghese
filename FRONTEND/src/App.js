@@ -1,44 +1,44 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 // components
-import Navbar from "./Components/Navbar/Navbar";
-
-import Footer from "./Components/Footer/Footer";
+import Navbar from "./layouts/Navbar/Navbar";
+import Footer from "./layouts/Footer/Footer";
 // pages
-import New from "./Pages/New";
-import Men from "./Pages/Men";
-import Women from "./Pages/Women";
-import Home from "./Pages/Home";
-import Product from "./Pages/Product";
-import Cart from "./Pages/Cart";
-import LoginSignup from "./Pages/LoginSignup";
-import Sales from "./Pages/Sales";
-import Shoes from "./Pages/Shoes";
-import Accesories from "./Pages/Accesories";
-import NoPage from "./Pages/NoPage";
-import ShopCategory from "./Pages/ShopCategory";
-import men_banner from "./Assets/Dummy/Hero/Hero2.jpg";
+import Home from "./pages/Home";
+import New from "./pages/New";
+import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import LoginSignup from "./pages/LoginSignup";
+import Sales from "./pages/Sales";
+import NoPage from "./pages/NoPage";
+import ShopCategory from "./pages/ShopCategory";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/men"
-            element={<ShopCategory banner={men_banner} category="men" />}
-          />
-          <Route path="/women" element={<ShopCategory category="women" />} />
-          <Route path="/kids" element={<ShopCategory category="kids" />} />
-          <Route path="/new" element={<New />} />
-          <Route path="/sales" element={<Sales />} />
-          <Route path="/shoes" element={<Shoes />} />
+          <Route path="/men" element={<ShopCategory category="Men" />} />
+          <Route path="/women" element={<ShopCategory category="Women" />} />
+          <Route path="/new" element={<ShopCategory category="New" />} />
+          <Route path="/sales" element={<ShopCategory category="Sales" />} />
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
-          <Route path="/accessories" element={<Accesories />} />
           <Route path="/login" element={<LoginSignup />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

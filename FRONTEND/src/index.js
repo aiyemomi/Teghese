@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import ShopContextProvider from "./Context/ShopContext";
-import CartContextProvider from "./Context/CartContext";
+import ShopContextProvider from "./context/ShopContext";
+import CartContextProvider from "./context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

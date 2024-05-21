@@ -11,9 +11,7 @@ const DescriptionBox = () => {
         <p>
           An e-commerce site is an online site that allows me to eat the food
         </p>
-        <p>
-          E-xommerce sites are blah blah blah
-        </p>
+        <p>E-xommerce sites are blah blah blah</p>
       </div>
     </div>
   );

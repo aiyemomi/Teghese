@@ -1,18 +1,21 @@
 .login-signup {
-  width: 100;
-  padding-top: 100px;
+  padding-top: 70px;
+  width: 100%;
 }
 .login-signup-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 500px;
-  height: 600px;
+  height: 610px;
   background: white;
   margin: auto;
-  padding: 40px 60px;
+  padding: 0px 40px;
 }
 .login-signup-container h1 {
   font-size: 22px;
   display: flex;
-  margin: 20px 0px;
+  margin: 10px 0px;
   justify-content: center;
   align-items: center;
   color: #5c5c5c;
@@ -23,6 +26,15 @@
   gap: 29px;
   margin-top: 30px;
 }
+.login-signup-fields form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-signup-fields form div {
+  font-size: 9px;
+  color: rgb(220, 47, 47);
+}
 .login-signup-fields input {
   height: 40px;
   width: 100%;
@@ -31,6 +43,9 @@
   outline: none;
   font-size: 12px;
   color: #5c5c5c;
+}
+.login-signup-fields input:focus {
+  border-color: rgb(220, 47, 47, 0.7);
 }
 .login-signup-container button {
   display: flex;
@@ -53,9 +68,16 @@
   margin-top: 20px;
   font-size: 11px;
 }
+.loginsignup-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 11px;
+}
 .loginsignup-login span {
   color: #dc2f2f;
   font-weight: 600;
+  cursor: pointer;
 }
 .loginsignup-agree {
   display: flex;

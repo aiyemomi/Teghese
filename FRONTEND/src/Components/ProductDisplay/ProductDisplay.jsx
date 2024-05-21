@@ -3,7 +3,7 @@ import "./ProductDisplay.css";
 import StarIcon from "@mui/icons-material/Star";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const ProductDisplay = ({ product }) => {
   const { addToCart } = useContext(CartContext);

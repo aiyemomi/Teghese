@@ -1,7 +1,7 @@
 import React from "react";
 import "./Lookbook.css";
-import img_1 from "../../Assets/Dummy/Hero/nav-img-woman2.jpg";
-import img_2 from "../../Assets/Dummy/Hero/nav-img-woman2.jpg";
+import img_1 from "../../assets/Dummy/Hero/nav-img-woman2.jpg";
+import img_2 from "../../assets/Dummy/Hero/nav-img-woman2.jpg";
 
 const Lookbook = () => {
   return (

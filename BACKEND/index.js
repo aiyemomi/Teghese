@@ -3,11 +3,12 @@ const express = require("express");
 const compression = require("compression");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-
+const helmet = require("helmet");
 const connectDB = require("./src/config/db");
 const productRouter = require("./src/routes/product");
 const userRouter = require("./src/routes/user");
 const authRouter = require("./src/routes/auth");
+const db = require("./src/routes/db");
 const notFound = require("./src/middleware/notFound");
 const errorHandler = require("./src/middleware/errorHandler");
 
@@ -15,6 +16,7 @@ const port = process.env.PORT;
 
 const app = express();
 
+app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }))
 app.use(express.json());
 app.use(cookieParser());
 app.use("/images", express.static("uploads/images"));
@@ -24,6 +26,8 @@ app.use(compression());
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/product", productRouter);
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/db", db);
+
 app.use(notFound);
 app.use(errorHandler);
 

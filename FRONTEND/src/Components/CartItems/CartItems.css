@@ -12,7 +12,7 @@
   grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
   align-items: center;
   gap: 50px;
-  padding: 12px 0px;
+  padding: 100px 0px 0px;
   color: #454545;
   font-size: 12px;
   font-weight: 600;
@@ -20,6 +20,10 @@
 .cart-items-format {
   font-size: 11px;
   font-weight: 500;
+}
+.cart-items-body {
+  height: 150px;
+  overflow-y: scroll;
 }
 .remove-icon {
   width: 15px;

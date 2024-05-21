@@ -4,8 +4,8 @@ const customError = require("../errors/customError");
 const jwt_secret = process.env.JWT_SECRET;
 
 const hashPassword = async (input) => {
-  if (input.length < 6) {
-    throw new customError("Password must be at least 6 characters long", 400);
+  if (input.length < 4) {
+    throw new customError("Password must be at least 4 characters long", 400);
   }
 
   try {

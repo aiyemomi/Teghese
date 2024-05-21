@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { all_product } from "../Assets/Dummy/data";
+import { all_product } from "../assets/Dummy/data";
 
 export const CartContext = createContext();
 const getDefaultCart = () => {

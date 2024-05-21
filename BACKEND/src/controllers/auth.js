@@ -45,28 +45,26 @@ const login = asyncWrapper(async (req, res) => {
   res.cookie("access-token", access_token, {
     maxAge: 60 * 60 * 24 * 7 * 1000,
     httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
   });
-  return res.status(200).json(user);
+  const { password: userPassword, ...userData } = user._doc;
+
+  return res.status(200).json(userData);
 });
 
-const getStatus = asyncWrapper(async (req, res) => {
-  const token = req.cookies["access-token"];
-  if (!token) {
-    return res.status(400).json({ error: "User not authenticated" });
-  }
-
-  const jwt_decoded = jwt.verify(token, jwt_secret);
-
-  if (jwt_decoded) {
+const getProfile = asyncWrapper(async (req, res) => {
+  if (req.user) {
     return res.json({
-      user: jwt_decoded,
+      user: req.user,
+      status: "logged in",
     });
   }
-  return res.status(500).json({ message: "error verifying status" });
+  return res.status(401).json({ message: "not logged in" });
 });
 
 module.exports = {
   register,
   login,
-  getStatus,
+  getProfile,
 };

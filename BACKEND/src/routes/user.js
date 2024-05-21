@@ -8,9 +8,9 @@ const {
   deleteUser,
 } = require("../controllers/user");
 
-router.use((req, res, next) => {
-  validateToken(req, res, next);
-});
+// router.use((req, res, next) => {
+//   validateToken(req, res, next);
+// });
 router.route("/").get(getAllUsers);
 
 router.route("/:id").get(getSingleUser).patch(updateUser).delete(deleteUser);

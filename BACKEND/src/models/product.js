@@ -9,11 +9,13 @@ const productSchema = new Schema(
     },
     description: { type: String },
     category: { type: String, required: true },
+    subCategories: [String],
     image: {
       type: String,
     },
+    colors: [String],
     new_price: { type: String },
-    old_price: { type: String, required: true },
+    old_price: { type: String },
     available: {
       type: Boolean,
       default: true,

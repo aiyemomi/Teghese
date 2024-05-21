@@ -1,0 +1,28 @@
+.category-section {
+  padding: 140px 0px;
+}
+.category-section h1 {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.category-section-main {
+  display: flex;
+  justify-content: center;
+}
+.category-breadcrumb-section {
+  padding: 18px;
+  border: 0.5px groove #ddd;
+  border-width: thin;
+  border-left: 0px;
+  border-right: 0px;
+}
+.category-body {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+}

@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 .shop-section-btn {
   letter-spacing: 0.2em;

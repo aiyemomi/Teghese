@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./CartItems.css";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import ClearIcon from "@mui/icons-material/Clear";
 
 const CartItems = () => {
@@ -17,32 +17,34 @@ const CartItems = () => {
         <p>Remove</p>
       </div>
       <hr />
-      {all_product.map((e) => {
-        return (
-          cartItems[e.id] > 0 && (
-            <div key={e.id}>
-              <div className="cart-items-format cart-items-format-main">
-                <img src={e.image} alt={e.name} />
-                <p>{e.name}</p>
-                <p>{e.price}</p>
-                <button className="cart-items-quantity">
-                  {cartItems[e.id]}
-                </button>
-                <p>{parseFloat(e.price) * cartItems[e.id]}</p>
-                <span
-                  className="remove-icon"
-                  onClick={() => {
-                    removeFromCart(e.id);
-                  }}
-                >
-                  <ClearIcon />
-                </span>
+      <div className="cart-items-body">
+        {all_product.map((e) => {
+          return (
+            cartItems[e.id] > 0 && (
+              <div key={e.id}>
+                <div className="cart-items-format cart-items-format-main">
+                  <img src={e.image} alt={e.name} />
+                  <p>{e.name}</p>
+                  <p>{e.price}</p>
+                  <button className="cart-items-quantity">
+                    {cartItems[e.id]}
+                  </button>
+                  <p>{parseFloat(e.price) * cartItems[e.id]}</p>
+                  <span
+                    className="remove-icon"
+                    onClick={() => {
+                      removeFromCart(e.id);
+                    }}
+                  >
+                    <ClearIcon />
+                  </span>
+                </div>
+                <hr />
               </div>
-              <hr />
-            </div>
-          )
-        );
-      })}
+            )
+          );
+        })}
+      </div>
       <div className="cart-items-down">
         <div className="cart-items-total">
           <h1>Cart Total</h1>

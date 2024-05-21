@@ -2,20 +2,26 @@
   /* padding: 60px 0px; */
 }
 .item {
-  width: 250px;
+  position: relative;
+  width: 220px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 .item img {
-  width: 250px;
-  height: 300px;
+  width: 220px;
+  height: 250px;
   object-fit: cover;
 }
 .item-prices {
   display: flex;
   font-size: 12px;
+  gap: 15px;
   letter-spacing: 1px;
+  font-weight: 600;
+}
+.old-price {
+  text-decoration: line-through;
 }
 .item-info {
   gap: 10px;
@@ -30,13 +36,21 @@
 }
 .item-name {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   text-wrap: wrap;
   text-align: center;
 }
 .item-description {
   font-size: 14px;
 }
+.item-favorite-icon {
+  font-size: 8px;
+  position: absolute;
+  bottom: 80px;
+  right: 8px;
+  cursor: pointer;
+}
+
 @media (max-width: 1000px) {
   .item img {
     width: 250px;

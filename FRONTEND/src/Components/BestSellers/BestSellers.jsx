@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./BestSellers.css";
-import { data_product } from "../../Assets/Dummy/data";
+import { data_product } from "../../assets/Dummy/data";
 import ItemCard from "../ItemCard/ItemCard";
 const BestSellers = () => {
   const [activeMenu, setActiveMenu] = useState("pants");

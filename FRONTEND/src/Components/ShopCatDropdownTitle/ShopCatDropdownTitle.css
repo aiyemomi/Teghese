@@ -1,0 +1,39 @@
+.shop-cat-titles {
+  padding: 10px 30px;
+  background-color: #eee;
+  /* display: grid; */
+  display: flex;
+  /* column-gap: 30px; */
+  gap: 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+.shopcat-title-icon {
+  display: flex;
+  gap: 80px;
+  padding: 8px 0px;
+}
+.shop-cat-title-container {
+  position: relative;
+  font-size: 14px;
+  max-width: 180px;
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+
+  cursor: default;
+}
+
+.shop-cat-title-container:hover .shop-cat-dropdown-title,
+.shop-cat-title-container:hover .shop-cat-title-icon {
+  transition: color 0.2s ease;
+  color: #dc2f2f;
+}
+.shop-cat-title-icon {
+  transition: 0.3s ease-in-out;
+}
+.shop-cat-title-icon:hover {
+}

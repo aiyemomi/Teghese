@@ -1,8 +1,8 @@
 import React from "react";
 import "./Hero.css";
-import image1 from "../../Assets/Dummy/Hero/hero-img-12.jpg";
-import image2 from "../../Assets/Dummy/Hero/hero-img-111.jpg";
-import image3 from "../../Assets/Dummy/Hero/hero-img-1.jpg";
+import image1 from "../../assets/Dummy/Hero/hero-img-12.jpg";
+import image2 from "../../assets/Dummy/Hero/hero-img-111.jpg";
+import image3 from "../../assets/Dummy/Hero/hero-img-1.jpg";
 import HeroCarouselItem from "../HeroCarousel/HeroCarouselItem";
 
 const slides = [

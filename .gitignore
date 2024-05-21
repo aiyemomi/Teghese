@@ -1,4 +1,4 @@
-
+BACKEND/data
 .env
 uploads
 # Logs
@@ -16,7 +16,7 @@ dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -25,3 +25,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+

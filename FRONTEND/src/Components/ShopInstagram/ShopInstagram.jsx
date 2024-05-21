@@ -1,7 +1,7 @@
 import React from "react";
 import "./ShopInstagram.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { shop_ig } from "../../Assets/Dummy/data";
+import { shop_ig } from "../../assets/Dummy/data";
 const ShopInstagram = () => {
   return (
     <div className="shop-instagram">

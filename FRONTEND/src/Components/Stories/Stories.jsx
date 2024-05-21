@@ -1,8 +1,8 @@
 import React from "react";
 import "./Stories.css";
-import img_1 from "../../Assets/Dummy/Stories/listen_music.jpg";
-import img_2 from "../../Assets/Dummy/Stories/family_recipe.jpg";
-import img_3 from "../../Assets/Dummy/Stories/45943.jpg";
+import img_1 from "../../assets/Dummy/Stories/listen_music.jpg";
+import img_2 from "../../assets/Dummy/Stories/family_recipe.jpg";
+import img_3 from "../../assets/Dummy/Stories/45943.jpg";
 
 import StoriesCard from "../StoriesCard/StoriesCard";
 const stories = [
@@ -34,6 +34,7 @@ const Stories = () => {
         {stories.map((story, index) => {
           return (
             <StoriesCard
+              key={index}
               image={story.image}
               title={story.title}
               story={story.story}
