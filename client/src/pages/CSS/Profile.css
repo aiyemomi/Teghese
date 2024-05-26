@@ -1,0 +1,47 @@
+.profile-section {
+  padding: 150px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.profile-logout {
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  cursor: pointer;
+  width: fit-content;
+}
+.profile-account {
+  margin-bottom: 20px;
+}
+.profile-account h1 {
+  letter-spacing: 0.2em;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.profile-account p {
+  font-size: 11px;
+}
+.orders-and-address {
+  display: flex;
+}
+.orders-and-address hr {
+  margin-bottom: 30px;
+}
+.profile-orders {
+  font-size: 11px;
+  flex: 2;
+  padding-right: 50px;
+}
+.profile-address {
+  font-size: 11px;
+  flex: 1;
+}
+.orders-address-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}

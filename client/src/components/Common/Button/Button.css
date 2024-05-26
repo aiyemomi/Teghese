@@ -1,0 +1,19 @@
+.black-button {
+  border: 1px solid transparent;
+  letter-spacing: 0.2em;
+  background-color: rgb(22, 22, 22);
+  color: white;
+  font-size: 11px;
+  display: block;
+  padding: 20px;
+  text-transform: uppercase;
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+}
+.black-button:hover {
+  font-weight: 500;
+  border: 1px solid;
+  background-color: transparent;
+  color: black;
+}
